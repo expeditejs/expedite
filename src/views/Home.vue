@@ -1,13 +1,13 @@
 <template>
   <div class="page-wrapper">
     <h1 class="home-page-title">{{ appTitle }}</h1>
-    <img alt="logo-bento" class="logo" src="@/assets/img/expeditejs.svg" />
+    <img alt="logo-expedite" class="logo" src="@/assets/img/expeditejs.svg" />
 
     <a
       rel="noopener"
       class="documentation-link"
       target="_blank"
-      href="https://expeditejs.netlify.com/"
+      href="https://github.com/expeditejs/expedite-core-docs/blob/master/docs/yourdocs.md"
       >Documentation →</a
     >
   </div>

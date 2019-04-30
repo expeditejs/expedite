@@ -1,9 +1,9 @@
 <template>
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
-      <img alt="logo-bento" class="logo" src="@/assets/img/expeditejs.svg" />
+      <img alt="logo-expedite" class="logo" src="@/assets/img/expeditejs.svg" />
       <span class="site-name">
-        Bento<span class="can-hide">Starter</span></span
+        Expedite<span class="can-hide">JS</span></span
       ></router-link
     >
     <div class="links">
