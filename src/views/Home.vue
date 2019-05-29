@@ -7,7 +7,7 @@
       rel="noopener"
       class="documentation-link"
       target="_blank"
-      href="https://github.com/expeditejs/expedite-core-docs/blob/master/docs/yourdocs.md"
+      href="http://expeditejs.net/expedite-core-docs/"
       >Documentation →</a
     >
   </div>
