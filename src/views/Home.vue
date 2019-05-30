@@ -7,7 +7,7 @@
       rel="noopener"
       class="documentation-link"
       target="_blank"
-      href="http://expeditejs.net/expedite-core-docs/"
+      href="https://expeditejs.net/expedite-core-docs/"
       >Documentation →</a
     >
   </div>
