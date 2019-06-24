@@ -1,8 +1,5 @@
 workbox.core.setCacheNameDetails({ prefix: 'expeditejs' })
 
-workbox.skipWaiting()
-workbox.clientsClaim()
-
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
@@ -15,7 +12,11 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {})
 // Redirect to index.html if sw cannot find matching route
 workbox.routing.registerNavigationRoute('/index.html', {
   /* Do not redirect routes used by firebase auth  */
-  blacklist: [new RegExp('/__/auth/handler'), new RegExp('/__/auth/iframe')]
+  blacklist: [
+    new RegExp('/__/auth/handler'),
+    new RegExp('/__/auth/iframe'),
+    new RegExp('/.well-known')
+  ]
 })
 
 workbox.routing.registerRoute(
@@ -26,3 +27,7 @@ workbox.routing.registerRoute(
   }),
   'GET'
 )
+
+addEventListener('message', messageEvent => {
+  if (messageEvent.data === 'skipWaiting') return self.skipWaiting()
+})
