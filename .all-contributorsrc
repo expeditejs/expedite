@@ -1,0 +1,29 @@
+{
+  "projectName": "Expedite",
+  "projectOwner": "expediteJS",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 75,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "oxyenyos",
+      "name": "Alok Prateek",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/21202365?s=460&v=4",
+      "profile": "https://github.com/oxyenyos",
+      "contributions": [
+        "code",
+        "doc",
+        "question",
+        "ideas",
+        "review",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
