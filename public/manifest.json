@@ -1,6 +1,6 @@
 {
-  "name": "expeditejs",
-  "short_name": "expeditejs",
+  "name": "ExpediteJS Core",
+  "short_name": "ExpediteJS",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
