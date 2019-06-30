@@ -1,6 +1,8 @@
 export default {
   appTitle: process.env.VUE_APP_TITLE,
+  appShortTitle: process.env.VUE_APP_SHORT_TITLE,
   networkOnLine: true,
-  newContentAvailable: false,
-  showAddToHomeScreenModalForApple: false
+  SWRegistrationForNewContent: null,
+  showAddToHomeScreenModalForApple: false,
+  refreshingApp: false
 }

@@ -2,10 +2,9 @@
   <header class="navbar" :class="{ offline: !networkOnLine }">
     <router-link to="/home">
       <img alt="logo-expedite" class="logo" src="@/assets/img/expeditejs.svg" />
-      <span class="site-name">
-        Expedite<span class="can-hide">JS</span></span
-      ></router-link
-    >
+      <span class="site-name title-desktop">{{ appTitle }}</span>
+      <span class="site-name title-mobile">{{ appShortTitle }}</span>
+    </router-link>
     <div class="links">
       <nav class="nav-links">
         <div class="nav-item">
@@ -42,7 +41,7 @@ export default {
   computed: {
     ...mapGetters('authentication', ['isUserLoggedIn']),
     ...mapState('authentication', ['user']),
-    ...mapState('app', ['networkOnLine'])
+    ...mapState('app', ['networkOnLine', 'appTitle', 'appShortTitle'])
   },
   methods: {
     async logout() {
@@ -61,8 +60,8 @@ export default {
   left: 0;
   z-index: 20;
   right: 0;
-  height: 3.6rem;
-  background-color: #fff;
+  height: $navbar-height;
+  background-color: $navbar-color;
   box-sizing: border-box;
   border-bottom: 1px solid #eaecef;
   padding: 0.7rem 1.5rem;
@@ -73,11 +72,27 @@ export default {
     align-items: center;
   }
 
+  .title-desktop {
+    display: inline;
+  }
+
+  .title-mobile {
+    display: none;
+  }
+
   @media (max-width: 500px) {
     padding: 0.7rem 0.7rem;
 
     .can-hide {
       display: none;
+    }
+
+    .title-desktop {
+      display: none;
+    }
+
+    .title-mobile {
+      display: block;
     }
   }
 
@@ -129,10 +144,19 @@ export default {
           cursor: pointer;
         }
 
-        .router-link-exact-active,
-        :hover {
+        @mixin activatedLink() {
           margin-bottom: -2px;
           border-bottom: 2px solid $vue-color;
+        }
+
+        .router-link-active {
+          @include activatedLink;
+        }
+
+        @media (hover) {
+          :hover {
+            @include activatedLink;
+          }
         }
       }
     }
